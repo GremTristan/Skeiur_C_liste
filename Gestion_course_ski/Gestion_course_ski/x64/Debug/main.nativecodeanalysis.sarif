@@ -1,0 +1,921 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C6200",
+          "message": {
+            "text": "L'index '1' est en dehors de la plage d'index valide '0' à '0' pour la mémoire tampon 'list_skieur' non allouée par la pile."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                },
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 33,
+                  "endLine": 42,
+                  "endColumn": 45
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "main",
+                  "decoratedName": "main",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6200",
+          "message": {
+            "text": "L'index '1' est en dehors de la plage d'index valide '0' à '0' pour la mémoire tampon 'list_skieur' non allouée par la pile."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                },
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 37,
+                  "endLine": 43,
+                  "endColumn": 49
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "main",
+                  "decoratedName": "main",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6200",
+          "message": {
+            "text": "L'index '1' est en dehors de la plage d'index valide '0' à '0' pour la mémoire tampon 'list_skieur' non allouée par la pile."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                },
+                "region": {
+                  "startLine": 44,
+                  "startColumn": 35,
+                  "endLine": 44,
+                  "endColumn": 47
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "main",
+                  "decoratedName": "main",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6064",
+          "message": {
+            "text": "Argument entier manquant pour 'scanf_s' qui correspond au spécificateur de conversion '2'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                },
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 3,
+                  "endLine": 33,
+                  "endColumn": 26
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "main",
+                  "decoratedName": "main",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Déréférencement du pointeur NULL 'list_skieur'. "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                },
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 2,
+                  "endLine": 42,
+                  "endColumn": 48
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "main",
+                  "decoratedName": "main",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 24,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 26,
+                            "startColumn": 10
+                          }
+                        },
+                        "message": {
+                          "text": "'list_skieur' peut avoir la valeur NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 27,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 29,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 31,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 32,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 33,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 34,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 36,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 37,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 38,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 39,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 31,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 32,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 33,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 34,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 36,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 37,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 38,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 39,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 31,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 42,
+                            "startColumn": 2
+                          }
+                        },
+                        "message": {
+                          "text": "'list_skieur' est déréférencé, mais peut encore avoir la valeur NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6385",
+          "message": {
+            "text": "Lecture de données non valides à partir de 'list_skieur'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                },
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 2,
+                  "endLine": 42,
+                  "endColumn": 48
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "main",
+                  "decoratedName": "main",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 24,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 26,
+                            "startColumn": 10
+                          }
+                        },
+                        "message": {
+                          "text": "'list_skieur' est un tableau de 1 éléments (32 octets)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 27,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 29,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 31,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 32,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 33,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 34,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 36,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 37,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 38,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 39,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 31,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 32,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 33,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 34,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 36,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 37,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 38,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 39,
+                            "startColumn": 3
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 31,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+                          },
+                          "region": {
+                            "startLine": 42,
+                            "startColumn": 2
+                          }
+                        },
+                        "message": {
+                          "text": "Lecture incorrecte depuis 'list_skieur[1]', (plage de lecture entre 0 et 0)"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.37.32825.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/duodj/source/repos/TP3/Gestion_course_ski/Gestion_course_ski/main.c"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "1d41e9e3d2ef73d239a7e8d61e0f3a79b3a39526a05831efb1ab1ac169f2662d"
+          }
+        }
+      ]
+    }
+  ]
+}
