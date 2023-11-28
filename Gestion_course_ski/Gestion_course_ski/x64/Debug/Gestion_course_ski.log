@@ -1,19 +1,9 @@
 ﻿  main.c
-C:\Users\duodj\source\repos\TP3\Gestion_course_ski\Gestion_course_ski\main.c(39,25): warning C4047: '=' : les niveaux d'indirection de 'int' et de 'void *' sont différents
-C:\Users\duodj\source\repos\TP3\Gestion_course_ski\Gestion_course_ski\main.c(40,30): warning C4047: '=' : les niveaux d'indirection de 'int' et de 'void *' sont différents
-C:\Users\duodj\source\repos\TP3\Gestion_course_ski\Gestion_course_ski\main.c(41,27): warning C4047: '=' : les niveaux d'indirection de 'int' et de 'void *' sont différents
-C:\Users\duodj\source\repos\TP3\Gestion_course_ski\Gestion_course_ski\main.c(44,17): error C2223: la partie gauche de '->premier' doit pointer vers struct/union
-C:\Users\duodj\source\repos\TP3\Gestion_course_ski\Gestion_course_ski\main.c(60,35): error C2223: la partie gauche de '->premier' doit pointer vers struct/union
-C:\Users\duodj\source\repos\TP3\Gestion_course_ski\Gestion_course_ski\main.c(61,10): error C2223: la partie gauche de '->premier' doit pointer vers struct/union
-C:\Users\duodj\source\repos\TP3\Gestion_course_ski\Gestion_course_ski\main.c(72,28): error C2223: la partie gauche de '->premier' doit pointer vers struct/union
-C:\Users\duodj\source\repos\TP3\Gestion_course_ski\Gestion_course_ski\main.c(76,11): warning C4477: 'printf' : la chaîne de format '%c' nécessite un argument de type 'int', mais l'argument variadique 1 est de type 'char *'
-C:\Users\duodj\source\repos\TP3\Gestion_course_ski\Gestion_course_ski\main.c(76,11): warning C4313: 'printf' : '%c' dans la chaîne de format est en conflit avec l'argument 1 de type 'char *'.
-C:\Users\duodj\source\repos\TP3\Gestion_course_ski\Gestion_course_ski\main.c(92,11): warning C4473: 'scanf_s' : nombre insuffisant d'arguments passés pour la chaîne de format
-C:\Users\duodj\source\repos\TP3\Gestion_course_ski\Gestion_course_ski\main.c(92,11): message : les espaces réservés et leurs paramètres attendent des arguments 2 variadiques, mais des arguments 1 ont été fournis
-C:\Users\duodj\source\repos\TP3\Gestion_course_ski\Gestion_course_ski\main.c(92,11): message : l'argument variadique manquant 2 est demandé par la chaîne de format '%c'
-C:\Users\duodj\source\repos\TP3\Gestion_course_ski\Gestion_course_ski\main.c(92,11): message : cet argument est utilisé comme taille de mémoire tampon
-C:\Users\duodj\source\repos\TP3\Gestion_course_ski\Gestion_course_ski\main.c(114,13): warning C4047: 'fonction' : les niveaux d'indirection de 'skieur_list *' et de 'skieur_list' sont différents
-C:\Users\duodj\source\repos\TP3\Gestion_course_ski\Gestion_course_ski\main.c(114,13): warning C4024: 'insertion' : types différents pour le paramètre formel et réel 1
-C:\Users\duodj\source\repos\TP3\Gestion_course_ski\Gestion_course_ski\main.c(120,16): warning C4047: 'fonction' : les niveaux d'indirection de 'skieur_list *' et de 'skieur_list' sont différents
-C:\Users\duodj\source\repos\TP3\Gestion_course_ski\Gestion_course_ski\main.c(120,16): warning C4024: 'afficherListe' : types différents pour le paramètre formel et réel 1
-C:\Users\duodj\source\repos\TP3\Gestion_course_ski\Gestion_course_ski\main.c(109,14): warning C4047: 'initialisation' : les niveaux d'indirection de 'skieur_list' et de 'skieur_list *' sont différents
+C:\Users\duodj\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(55,26): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\duodj\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(72,11): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\duodj\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(84,11): warning C4473: 'scanf_s' : nombre insuffisant d'arguments passés pour la chaîne de format
+C:\Users\duodj\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(84,11): message : les espaces réservés et leurs paramètres attendent des arguments 2 variadiques, mais des arguments 1 ont été fournis
+C:\Users\duodj\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(84,11): message : l'argument variadique manquant 2 est demandé par la chaîne de format '%s'
+C:\Users\duodj\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(84,11): message : cet argument est utilisé comme taille de mémoire tampon
+C:\Users\duodj\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(89): warning C4172: retourne l'adresse d'une variable locale ou : skieur1 temporaire
+  Gestion_course_ski.vcxproj -> C:\Users\duodj\Skeiur_C_liste\Gestion_course_ski\x64\Debug\Gestion_course_ski.exe

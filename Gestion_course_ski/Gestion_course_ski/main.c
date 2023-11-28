@@ -4,49 +4,44 @@
 #include <time.h>
 
 
-struct skieur {
+typedef struct Skieur {
 	char nom[20];
 	int dossard;
 	int temps;
 	int classement;
 
-} typedef skieur;
+}skieur;
 
+typedef struct Element {
+	skieur skieurX;
+	struct element* suivant;
+}element;
 
-struct element {
-	skieur skieur;
-	struct element *suivant;
-} typedef element;
-
-struct	ListSkieur
+typedef struct ListSkieur
 {
-	skieur *premier;
-};typedef skieur_list;
+	element *premier;
+}listskieur;
  
-
-	skieur_list* initialisation()
+	//initialisation de la liste
+	listskieur* initialisation()
 	{
-		skieur_list* liste_skieur = malloc(sizeof(*liste_skieur));
-		element* skieurX = malloc(sizeof(*skieurX));
+		listskieur* liste = malloc(sizeof(*liste));
+		element* element = malloc(sizeof(*element));
 
-		if (liste_skieur == NULL || skieurX == NULL)
+		if (liste == NULL || element == NULL)
 		{
 			exit(EXIT_FAILURE);
 		}
 
-		//initialisation du skieur
-		strcpy_s(skieurX->skieur.nom,sizeof(skieurX->skieur.nom), "nom");
-		skieurX->skieur.temps = NULL;
-		skieurX->skieur.classement = NULL;
-		skieurX->skieur.dossard = NULL;
+		element->skieurX;
+		element->suivant = NULL;
+		
+		liste->premier = element;
 
-		//initialisation de la liste
-		liste_skieur->premier = skieurX;
-
-		return liste_skieur;
+		return liste;
 	}
-
-	void insertion(skieur_list* liste, skieur nvSkieur)
+	
+	void insertion(listskieur* liste, skieur nvSkieur)
 	{
 		/* Création du nouvel skieur */
 		element* nouveauSkieur = malloc(sizeof(*nouveauSkieur));
@@ -54,15 +49,15 @@ struct	ListSkieur
 		{
 			exit(EXIT_FAILURE);
 		}
-		nouveauSkieur->skieur = nvSkieur;
+		nouveauSkieur->skieurX = nvSkieur;
 
 		/* Insertion de l'élément au début de la liste */
 		nouveauSkieur->suivant = liste->premier;
 		liste->premier = nouveauSkieur;
 	}
 
-	//afficher la liste
-	void afficherListe(skieur_list* liste)
+	//afficher la liste des skieurs avec leurs dossards et leurs temps sous la forme : nom dossard temps et classement 
+	void afficherListe(listskieur* liste)
 	{
 		if (liste == NULL)
 		{
@@ -73,23 +68,20 @@ struct	ListSkieur
 
 		while (actuel != NULL)
 		{
-			printf("-------- %c --------\n", actuel->skieur.nom);
-			printf("------- %d ---------\n", actuel->skieur.dossard);
-			printf("------- %d ---------\n", actuel->skieur.temps);
-			printf("------- %d ---------\n", actuel->skieur.classement);
-
+			printf("%s %d %d %d\n", actuel->skieurX.nom, actuel->skieurX.dossard, actuel->skieurX.temps, actuel->skieurX.classement);
 			actuel = actuel->suivant;
 		}
 
 		printf("\n");
 	}
-
-
+	 
+	
 
 	// Fonction qui permet de créer un skieur
-	skieur* cree_skieur(skieur skieur1) {
+	skieur* cree_skieur() {
+		skieur skieur1;
 		printf("Nom du skieur : ");
-		scanf_s("%c", &skieur1.nom);
+		scanf_s("%s", &skieur1.nom);
 		printf("Dossard du skieur : ");
 		scanf_s("%d", &skieur1.dossard);
 		printf("Temps du skieur : ");
@@ -102,17 +94,20 @@ int main() {
 	
 
 	// Déclaration des variables
-	int etat; //nombre de manche
-
-
+	int etat,nbskieur; //nombre de manch
 	etat = 1;
-	skieur_list liste = initialisation();
+	listskieur *liste = initialisation();
+	printf("Combien de skieur voulez vous ajouter ? : ");
+	scanf_s("%d", &nbskieur);
 
 
 	while (etat != 2) {
-		skieur skieur1;	
-		insertion(liste,*cree_skieur(skieur1));
 		
+		insertion(liste,*cree_skieur());
+		printf("Voulez vous ajouter un skieur ? (1 = oui / 2 = non) : ");
+		scanf_s("%d", &etat);
+
+
 
 
 
