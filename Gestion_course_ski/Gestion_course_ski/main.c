@@ -4,10 +4,19 @@
 #include <time.h>
 #include <stdbool.h>
 
+
+//typedef struct temps {
+//	int minutes;
+//	int secondes;
+//	int centiemes;
+//}temps;
+
+
 typedef struct Skieur {
 	char nom[20];
 	int dossard;
 	int temps;
+	//temps temp_Joueur;
 	int classement;
 
 }skieur;
@@ -22,6 +31,9 @@ typedef struct ListSkieur
 	element *premier;
 }listskieur;
  
+
+
+
 	//initialisation de la liste
 	listskieur* initialisation()
 	{
@@ -55,6 +67,7 @@ typedef struct ListSkieur
 		nouveauSkieur->suivant = liste->premier;
 		liste->premier = nouveauSkieur;
 	}
+	
 
 	//afficher les informations des skieurs avec leurs dossards et leurs temps sous la forme : nom dossard temps et classement ne pas afficher le dernier element de la liste
 	void afficherListe(listskieur* liste)
@@ -75,16 +88,20 @@ typedef struct ListSkieur
 		printf("\n");
 	}
 
-	 
+	
+
+
+	
 	
 
 // Fonction qui demande de renseigner les informations d'un skieur et qui renvoie un skieur avec ces informations	
 skieur* cree_skieur() {
 	skieur* skieur = malloc(sizeof(*skieur));
+	skieur->dossard = rand() % (100 - 1 + 1) + 1;
 	printf("Veuillez renseigner le nom du skieur : ");
 	scanf_s("%s", &skieur->nom, 20);
-	printf("Veuillez renseigner le dossard du skieur : ");
-	scanf_s("%d", &skieur->dossard);
+	printf("Voici le dossard |%d| assigne au skieur  \n", skieur->dossard);
+
 	//gestion d'erreur si le dossard existe deja
 	
 	printf("Veuillez renseigner le temps du skieur : ");
@@ -166,6 +183,23 @@ void enregistrement_skieur(listskieur *liste, int choix) {
 	system("cls");
 }
 
+
+//fonction qui trie une liste en fonction du temps dans l'order croissant
+void trier_list_crossant(listskieur* liste,listskieur* liste_trier) {
+	element *min = malloc(sizeof(*min));
+	listskieur* listeTemp = initialisation();
+	min = liste->premier;
+	while (liste->premier != NULL) {
+		if (liste->premier->skieurX.temps < min->skieurX.temps) {
+			min = liste->premier;
+			insertion(liste_trier, min->skieurX);
+		}
+		liste->premier = liste->premier->suivant;
+	}
+		
+}
+
+
 //menu de sélection des actions
 void menu() {
 		printf("Que voulez vous faire ?\n");
@@ -179,48 +213,30 @@ void menu() {
 }
 
 //enregistrement du temps de chaque jouer dans la liste
-void enregistrement_temps(listskieur* liste) {
+void enregistrement_temps(listskieur* liste, listskieur* listeclass) {
 	while (liste->premier->suivant != NULL) {
 		printf("Veuillez renseigner le temps du skieur %s : ", liste->premier->skieurX.nom);
 		scanf_s("%d", &liste->premier->skieurX.temps);
+		insertion(listeclass, liste->premier->skieurX);
 		liste->premier = liste->premier->suivant;
+
 	}
 }
 
-//trier une liste en fonction du temps dans l'order croissant
-void trier(listskieur la)
-{// ici on va ranger les elements dans l'ordre croisssant avant de les afficher.
-	listskieur temp, temp1, temp3;
-	int min;
-	for (temp = la; temp != NULL; temp = temp->next)
-	{
-		temp3 = temp;
-		min = temp->skieurX;
-		for (temp1 = temp->suivant; temp1 != NULL; temp1 = temp1->suivant)
-		{
-			if (min > temp1->skieurX)
-			{
-				temp3 = temp1; // le 3è temporaire est l'adresse de l'élement où se trouve le minimum
-				min = temp3->SkieurX;
-			}
-		}
-		temp3->skieurX = temp->skieurX; //echange des 2 elements...
-		temp->Skieur = min;
-	}
-}
 
+//trier une liste en fonction du temps dans l'order croissant 
 int main() {
 	
 	
 
-	// Déclaration des variables
+	// Déclaration des variableszZ
 
 	int choix , nbskieur, nbskieurTemp; //variable 
-	
+ 	 
 	bool etat = true;
 	listskieur *liste = initialisation();
-	listskieur *listeFirst = initialisation();
-
+	listskieur *listeFirstTour = initialisation();
+	
 	while (etat) {
 		//menu de sélection des actions
 		menu();
@@ -236,7 +252,14 @@ int main() {
 			break;
 		case 2:
 			//affichage de la liste des skieurs
-			visualisation_joueur(liste, choix);
+			if (liste->premier->suivant != NULL) {
+				visualisation_joueur(liste, choix);
+			}else {
+				printf("La liste est vide !\n");
+				visualisation_joueur(listeFirstTour, choix);
+			}
+			
+
 			break;
 		case 3:
 			//lancement de la course
@@ -244,11 +267,11 @@ int main() {
 			break;
 		case 4:
 			//affichage du classement
-			afficher_classement(listeFirst);
+			trier_list(liste);
 			break;
 		case 5:
 			//enregistrement du temps de chaque jouer dans la liste 
-			enregistrement_temps(liste);
+			enregistrement_temps(liste,listeFirstTour);
 			break;
 		case 8:
 			etat = false;

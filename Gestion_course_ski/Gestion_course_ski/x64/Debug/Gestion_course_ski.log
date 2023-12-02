@@ -1,9 +1,2 @@
-﻿  main.c
-C:\Users\duodj\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(55,26): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(72,11): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(101,9): warning C4244: 'fonction' : conversion de 'time_t' en 'unsigned int', perte possible de données
-C:\Users\duodj\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(124,3): warning C4013: 'Sleep' non défini(e) ; extern retournant int pris par défaut
-C:\Users\duodj\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(185,18): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(196,14): warning C4101: 'nbskieur' : variable locale non référencée
-C:\Users\duodj\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(196,24): warning C4101: 'nbskieurTemp' : variable locale non référencée
-  Gestion_course_ski.vcxproj -> C:\Users\duodj\Skeiur_C_liste\Gestion_course_ski\x64\Debug\Gestion_course_ski.exe
+﻿main.obj : error LNK2019: symbole externe non résolu trier_list référencé dans la fonction main
+C:\Users\duodj\Skeiur_C_liste\Gestion_course_ski\x64\Debug\Gestion_course_ski.exe : fatal error LNK1120: 1 externes non résolus
