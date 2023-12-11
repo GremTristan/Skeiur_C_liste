@@ -1,20 +1,21 @@
 ﻿  main.c
-C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(72,41): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(96,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(104,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(145,7): warning C4013: 'Sleep' non défini(e) ; extern retournant int pris par défaut
-C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(252,44): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(260,44): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(284,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(290,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(302,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(308,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(321,35): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(327,30): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(330,33): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(343,1): warning C4133: 'initialisation' : types incompatibles - de 'element *' à 'element *'
-C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(357,29): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(367,18): warning C4244: 'fonction' : conversion de 'time_t' en 'unsigned int', perte possible de données
-C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(372,13): warning C4101: 'nbskieur' : variable locale non référencée
-C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(372,23): warning C4101: 'nbskieurTemp' : variable locale non référencée
+C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(73,41): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(100,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(115,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(123,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(164,7): warning C4013: 'Sleep' non défini(e) ; extern retournant int pris par défaut
+C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(272,44): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(280,44): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(306,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(313,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(326,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(332,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(345,35): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(351,30): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(354,33): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(367,1): warning C4133: 'initialisation' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(381,29): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(391,18): warning C4244: 'fonction' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(396,13): warning C4101: 'nbskieur' : variable locale non référencée
+C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(396,23): warning C4101: 'nbskieurTemp' : variable locale non référencée
   Gestion_course_ski.vcxproj -> C:\Users\gremling3u\Desktop\Skeiur_C_liste\Gestion_course_ski\x64\Debug\Gestion_course_ski.exe
