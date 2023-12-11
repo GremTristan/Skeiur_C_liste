@@ -41,7 +41,7 @@ typedef struct ListSkieur
 
 //initialisation de la liste
 listskieur* initialisation()
-{
+{git 
 	listskieur* liste = malloc(sizeof(*liste));
 	element* element = malloc(sizeof(*element));
 
@@ -81,24 +81,27 @@ void afficherListe(listskieur* liste, int choix, int tour)
 		exit(EXIT_FAILURE);
 	}
 
-	element* actuel = liste->premier;
-	if (actuel == NULL && choix == 1) {
+	element* skieur_temp = liste->premier;
+	if (skieur_temp == NULL && choix == 1) {
 		printf("Aucun skieur enregistre \n");
 	}
 	if (tour == 1) {
-		while (actuel != NULL) {
+		while (skieur_temp != NULL) {
 			if (choix != 4) {
-				printf(" Nom : | %s |, Dossard : | %d |, Temps : | %d | \n", actuel->skieurX.nom, actuel->skieurX.dossard, actuel->skieurX.temps);
-				actuel = actuel->suivant;
-			}
+				printf(" Nom : | %s |, Dossard : | %d |, Temps : | %d | \n", skieur_temp->skieurX.nom, skieur_temp->skieurX.dossard, skieur_temp->skieurX.temps);
+				
+				if (skieur_temp->suivant == NULL) {
+					printf(RED "La liste est vide" RESET);
+				}
+			}skieur_temp = skieur_temp->suivant;
 
 		}
 	}
 	if (tour == 2) {
-		while (actuel != NULL) {
+		while (skieur_temp != NULL) {
 			if (choix != 4) {
-				printf(" Nom : | %s |, Dossard : | %d |, Temps 1 : | %d |, Temps 2 : | %d | \n", actuel->skieurX.nom, actuel->skieurX.dossard, actuel->skieurX.temps, actuel->skieurX.temps1);
-				actuel = actuel->suivant;
+				printf(" Nom : | %s |, Dossard : | %d |, Temps 1 : | %d |, Temps 2 : | %d | \n", skieur_temp->skieurX.nom, skieur_temp->skieurX.dossard, skieur_temp->skieurX.temps, skieur_temp->skieurX.temps1);
+				skieur_temp = skieur_temp->suivant;
 			}
 
 		}
@@ -239,13 +242,13 @@ void menu(int etat) {
 }
 
 //enregistrement du temps de chaque jouer dans la liste
-void enregistrement_temps(listskieur* liste, listskieur* actuel, int tour) {
+void enregistrement_temps(listskieur* liste, listskieur* skieur_temp, int tour) {
 
 	if (tour == 1) {
 		while (liste->premier->suivant != NULL) {
 			printf("Veuillez renseigner le temps du skieur %s : ", liste->premier->skieurX.nom);
 			scanf_s("%d", &liste->premier->skieurX.temps);
-			insertion(actuel, liste->premier->skieurX);
+			insertion(skieur_temp, liste->premier->skieurX);
 			liste->premier = liste->premier->suivant;
 		}
 	}
@@ -253,7 +256,7 @@ void enregistrement_temps(listskieur* liste, listskieur* actuel, int tour) {
 		while (liste->premier->suivant != NULL) {
 			printf("Veuillez renseigner le temps du skieur %s : ", liste->premier->skieurX.nom);
 			scanf_s("%d", &liste->premier->skieurX.temps1);
-			insertion(actuel, liste->premier->skieurX);
+			insertion(skieur_temp, liste->premier->skieurX);
 			liste->premier = liste->premier->suivant;
 		}
 	}
@@ -266,43 +269,43 @@ void enregistrement_temps(listskieur* liste, listskieur* actuel, int tour) {
 
 //afficher le classement du premier tour en triant la liste en fonction du temps dans l'order croissant
 void afficher_classement(listskieur* liste, listskieur* listeabandon, listskieur* classementliste, int choix, int tour) {
-	element* actuel = liste->premier;
+	element* skieur_temp = liste->premier;
 	printf("Voici le classement du premier tour : \n");
 
-	if (actuel == NULL) {
+	if (skieur_temp == NULL) {
 		printf("ça buuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuug \n");
 	}
 	if (tour == 1) {
-		while (actuel != NULL) {
-			if (actuel->skieurX.temps != 0) {
-				insertion(classementliste, actuel->skieurX);
+		while (skieur_temp != NULL) {
+			if (skieur_temp->skieurX.temps != 0) {
+				insertion(classementliste, skieur_temp->skieurX);
 				printf("Qualification de :     | %s | \n", classementliste->premier->skieurX.nom);
 
-				actuel = actuel->suivant;
+				skieur_temp = skieur_temp->suivant;
 			}
 			else {
-				insertion(listeabandon, actuel->skieurX);
+				insertion(listeabandon, skieur_temp->skieurX);
 				printf("Abandon de :           | %s |  \n", listeabandon->premier->skieurX.nom);
 
-				actuel = actuel->suivant;
+				skieur_temp = skieur_temp->suivant;
 			}
 		}
 
 
 	}
 	if (tour == 2) {
-		while (actuel != NULL) {
-			if (actuel->skieurX.temps1 != 0) {
-				insertion(classementliste, actuel->skieurX);
+		while (skieur_temp != NULL) {
+			if (skieur_temp->skieurX.temps1 != 0) {
+				insertion(classementliste, skieur_temp->skieurX);
 				printf("Qualification de :     | %s | \n", classementliste->premier->skieurX.nom);
 
-				actuel = actuel->suivant;
+				skieur_temp = skieur_temp->suivant;
 			}
 			else {
-				insertion(listeabandon, actuel->skieurX);
+				insertion(listeabandon, skieur_temp->skieurX);
 				printf("Abandon de :           | %s |  \n", listeabandon->premier->skieurX.nom);
 
-				actuel = actuel->suivant;
+				skieur_temp = skieur_temp->suivant;
 			}
 		}
 
