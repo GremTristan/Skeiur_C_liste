@@ -1,30 +1,37 @@
 ﻿  main.c
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(73,41): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(95,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(109,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(122,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(127,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(133,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(148,36): warning C4013: 'GénérerDossard' non défini(e) ; extern retournant int pris par défaut
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(179,7): warning C4013: 'Sleep' non défini(e) ; extern retournant int pris par défaut
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(299,54): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(307,54): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(333,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(340,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(353,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(359,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(371,12): warning C4473: 'printf' : nombre insuffisant d'arguments passés pour la chaîne de format
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(371,12): message : les espaces réservés et leurs paramètres attendent des arguments 4 variadiques, mais des arguments 3 ont été fournis
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(371,12): message : l'argument variadique manquant 4 est demandé par la chaîne de format '%d'
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(373,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(377,12): warning C4473: 'printf' : nombre insuffisant d'arguments passés pour la chaîne de format
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(377,12): message : les espaces réservés et leurs paramètres attendent des arguments 3 variadiques, mais des arguments 2 ont été fournis
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(377,12): message : l'argument variadique manquant 3 est demandé par la chaîne de format '%d'
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(379,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(393,35): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(399,30): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(402,33): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(415,1): warning C4133: 'initialisation' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(429,29): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
-C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(439,18): warning C4244: 'fonction' : conversion de 'time_t' en 'unsigned int', perte possible de données
-  Gestion_course_ski.vcxproj -> C:\Users\duodj\Documents\Skeiur_C_liste\Gestion_course_ski\x64\Debug\Gestion_course_ski.exe
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(73,41): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(95,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(109,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(122,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(127,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(133,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(148,36): warning C4013: 'GénérerDossard' non défini(e) ; extern retournant int pris par défaut
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(179,7): warning C4013: 'Sleep' non défini(e) ; extern retournant int pris par défaut
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(300,54): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(308,54): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(335,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(342,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(355,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(361,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(373,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(378,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(384,39): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(399,33): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(411,13): warning C4047: 'fonction' : les niveaux d'indirection de 'FILE **' et de 'FILE *' sont différents
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(411,11): warning C4024: 'fopen_s' : types différents pour le paramètre formel et réel 1
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(415,39): warning C4047: 'fonction' : les niveaux d'indirection de 'const char *const ' et de 'int' sont différents
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(415,31): warning C4024: 'fprintf' : types différents pour le paramètre formel et réel 2
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(415,72): warning C4047: 'fonction' : les niveaux d'indirection de 'const char *' et de 'int' sont différents
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(415,64): warning C4024: 'strlen' : types différents pour le paramètre formel et réel 1
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(416,37): warning C4047: 'fonction' : les niveaux d'indirection de 'const char *const ' et de 'int' sont différents
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(416,31): warning C4024: 'fprintf' : types différents pour le paramètre formel et réel 2
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(416,68): warning C4047: 'fonction' : les niveaux d'indirection de 'const char *' et de 'int' sont différents
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(416,62): warning C4024: 'strlen' : types différents pour le paramètre formel et réel 1
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(417,38): warning C4047: 'fonction' : les niveaux d'indirection de 'const char *const ' et de 'int' sont différents
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(417,31): warning C4024: 'fprintf' : types différents pour le paramètre formel et réel 2
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(417,70): warning C4047: 'fonction' : les niveaux d'indirection de 'const char *' et de 'int' sont différents
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(417,63): warning C4024: 'strlen' : types différents pour le paramètre formel et réel 1
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(418,29): warning C4133: '=' : types incompatibles - de 'element *' à 'element *'
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(425,18): warning C4244: 'fonction' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\Gestion_course_ski\main.c(578,8): warning C4013: 'gets' non défini(e) ; extern retournant int pris par défaut
+  Gestion_course_ski.vcxproj -> C:\Users\gremling3u\Documents\Skeiur_C_liste\Gestion_course_ski\x64\Debug\Gestion_course_ski.exe
