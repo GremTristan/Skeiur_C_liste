@@ -75,58 +75,68 @@ void insertion(listskieur* liste, skieur nvSkieur)
 }
 
 //afficher les informations des skieurs avec leurs dossards et leurs temps sous la forme : nom dossard temps et classement sans afficher le dernier skieur qui est NULL
-void afficherListe(listskieur* liste, int choix, int tour)
+void afficherListe(listskieur* liste_fonc, int choix, int tour)
 {
-	if (liste == NULL)
+	if (liste_fonc == NULL)
 	{
 		exit(EXIT_FAILURE);
 	}
 	int value = 0;
-	element* skieur_temp = liste->premier;
+
+	element* skieur_temp = liste_fonc->premier;
 	if (skieur_temp == NULL && choix == 1) {
 		printf("Aucun skieur enregistre \n");
 	}
 	if (tour == 1) {
 		while (skieur_temp != NULL) {
-			if (choix != 4) {
 				printf(CYN "Indice dans la liste : %d " RESET, value);
 				printf(" Nom : | %s |, Dossard : | %d |\n", skieur_temp->skieurX.nom, skieur_temp->skieurX.dossard);
 				value++;
+				skieur_temp = skieur_temp->suivant;
 
 				/*if (skieur_temp->suivant == NULL) {
 					printf(RED "La liste est vide" RESET);
 				}*/
-
-			}skieur_temp = skieur_temp->suivant;
-
+			}
 		}
-	}
-	if (tour == 2) {
+
+	if (tour == 4) {
 		while (skieur_temp != NULL) {
-			if (choix != 4) {
 				printf(CYN "Indice dans la liste : %d " RESET, value);
+
 				printf(" Nom : | %s |, Dossard : | %d |, Temps : | %d | \n", skieur_temp->skieurX.nom, skieur_temp->skieurX.dossard, skieur_temp->skieurX.temps);
 				value++;
-				
+				skieur_temp = skieur_temp->suivant;
 				/*if (skieur_temp->suivant == NULL) {
 					printf(RED "La liste est vide" RESET);
 				}*/
 
-			}skieur_temp = skieur_temp->suivant;
-
 		}
+
 	}
 	if (tour == 3) {
 		while (skieur_temp != NULL) {
-			if (choix != 4) {
+			if (skieur_temp->skieurX.temps == 0)
+			{
+				printf(" Nom : | %s |, Dossard : | %d |, Temps 1 : | NA |, Temps 2 : | NA | \n", skieur_temp->skieurX.nom, skieur_temp->skieurX.dossard);
+				skieur_temp = skieur_temp->suivant;
+			}
+			if (skieur_temp->skieurX.temps1 == 0)
+			{
+				printf(" Nom : | %s |, Dossard : | %d |, Temps 1 : | %d |, Temps 2 : | NA | \n", skieur_temp->skieurX.nom, skieur_temp->skieurX.dossard, skieur_temp->skieurX.temps);
+				skieur_temp = skieur_temp->suivant;
+			}
+			
+			if (skieur_temp->skieurX.temps != 0 && skieur_temp->skieurX.temps1 != 0)
+			{
 				printf(" Nom : | %s |, Dossard : | %d |, Temps 1 : | %d |, Temps 2 : | %d | \n", skieur_temp->skieurX.nom, skieur_temp->skieurX.dossard, skieur_temp->skieurX.temps, skieur_temp->skieurX.temps1);
 				skieur_temp = skieur_temp->suivant;
 			}
 
-		}
 	}
 	printf("--------------------------------------------------\n");
 
+		}
 	printf("\n");
 }
 
@@ -135,7 +145,7 @@ void afficherListe(listskieur* liste, int choix, int tour)
 // Fonction qui demande de renseigner les informations d'un skieur et qui renvoie un skieur avec ces informations	
 skieur* cree_skieur() {
 	skieur* skieur = malloc(sizeof(*skieur));
-	skieur->dossard = rand() % (100 - 1 + 1) + 1;
+	skieur->dossard = GénérerDossard();
 	printf("Veuillez renseigner le nom du skieur : ");
 	scanf_s("%s", &skieur->nom, 20);
 	printf("Voici le dossard |%d| assigne au skieur  \n", skieur->dossard);
@@ -143,6 +153,10 @@ skieur* cree_skieur() {
 
 }
 
+int GénérerDossard(){
+// Générer un dossard aléatoire entre 1 et 100 inclus
+	return rand() % (100 - 1 + 1) + 1;
+}
 
 //fonction qui affiche le classement du premier tour en triant la liste en fonction du temps dans l'order croissant 
 
@@ -150,11 +164,12 @@ skieur* cree_skieur() {
 
 
 //foncion annimation terminal 
-void game_annime(listskieur* liste, int choix, int tour) {
+void game_annime(listskieur* liste_fonc, int choix, int tour) {
+	listskieur* liste_temp = liste_fonc;
 	//affichage des jouers qui participe a la course sous forme de tableau
 	printf("--------------------------------------------------\n");
 	printf("Voici les skieurs qui participent a la course :\n");
-	afficherListe(liste, choix, tour);
+	afficherListe(liste_temp, choix, tour);
 	printf("--------------------------------------------------\n");
 	//affichage du compte a rebours
 	printf("Le compte a rebours commence !\n");
@@ -176,9 +191,9 @@ void game_annime(listskieur* liste, int choix, int tour) {
 }
 
 //visualisation des joueur enregister dans la liste
-void visualisation_joueur(listskieur* liste, int choix, int tour) {
+void visualisation_joueur(listskieur* liste_fonc, int choix, int tour) {
 	while (choix != 9) {
-		afficherListe(liste, choix, tour);
+		afficherListe(liste_fonc, choix, tour);
 		//demander si il a fini de regarder la liste
 		printf("Avez vous fini de regarder la liste ?\n");
 
@@ -192,14 +207,14 @@ void visualisation_joueur(listskieur* liste, int choix, int tour) {
 }
 
 //enregistrement des skieurs dans la liste
-void enregistrement_skieur(listskieur* liste, int choix) {
+void enregistrement_skieur(listskieur* liste_fonc, int choix) {
 	int nbskieurTemp = 0;
 	int nbskieur;
 	printf("Combien de skieur voulez vous ajouter ? : ");
 	scanf_s("%d", &nbskieur);
 	while (nbskieurTemp != nbskieur) {
 
-		insertion(liste, *cree_skieur());
+		insertion(liste_fonc, *cree_skieur());
 		nbskieurTemp++;
 	}
 	system("cls");
@@ -212,17 +227,25 @@ void menu(int etat) {
 		printf("----------Enregistrement des skieurs et assignation des dossarts-------------- \n");
 		printf("Que voulez vous faire ?\n\n");
 		printf("1 : Ajouter un skieur \n");
+		printf("------------------------------------------------------- \n");
+		printf("10 : Quitter\n");
+	}
+	if (etat == 6) {
+		printf("Que voulez vous faire ?\n\n");
 		printf("2 : Afficher la liste des skieurs\n");
+		printf("3 : Lancer la course\n");
+		printf("------------------------------------------------------- \n");
+		printf("10 : Quitter\n");
+	}
+	if (etat == 7) {
+		printf("Que voulez vous faire ?\n\n");
 		printf("3 : Lancer la course\n");
 		printf("------------------------------------------------------- \n");
 		printf("10 : Quitter\n");
 	}
 	if (etat == 1) {
 		printf("----------La premiere manche est fini-------------- \n");
-		//printf("4 : Rentrer le temps de chaque jouer pour le premier tour  \n");
 		printf("5 : Afficher le classement du premier tour \n");
-		//printf("6 : Afficher les skieurs qui ont abandonner \n");
-		printf("7 : Deuxieme manche \n");
 		printf("------------------------------------------------------- \n");
 		printf("10 : Quitter\n");
 	}
@@ -239,12 +262,16 @@ void menu(int etat) {
 		printf("------------------------------------------------------- \n");
 		printf("10 : Quitter\n");
 	}
+	if (etat == 9) {
+		printf("----------Deuxieme tour -------------- \n");
+		printf("Que voulez vous faire ?\n\n");
+		printf("3 : Lancer la course\n");
+		printf("------------------------------------------------------- \n");
+		printf("10 : Quitter\n");
+	}
 	if (etat == 3) {
 		printf("----------Deuxieme tour est fini -------------- \n");
-		printf("Que voulez vous faire ?\n\n");
-		//printf("4 : Rentrer le temps de chaque jouer pour le deuxieme tour  \n");
 		printf("5 : Afficher le classement du deuxieme tour \n");
-		//printf("6 : Afficher les skieurs qui ont abandonner \n");
 		printf("-------------------FINI------------------------------------ \n");
 		printf("10 : Quitter\n");
 		
@@ -262,22 +289,22 @@ void menu(int etat) {
 }
 
 //enregistrement du temps de chaque jouer dans la liste
-void enregistrement_temps(listskieur* liste, listskieur* skieur_temp, int tour) {
+void enregistrement_temps(listskieur* liste_fonc, listskieur* skieur_temp, int tour) {
 
-	if (tour == 2) {
-		while (liste->premier != NULL) {
-			printf("Veuillez renseigner le temps du skieur %s : ", liste->premier->skieurX.nom);
-			scanf_s("%d", &liste->premier->skieurX.temps);
-			insertion(skieur_temp, liste->premier->skieurX);
-			liste->premier = liste->premier->suivant;
+	if (tour == 1) {
+		while (liste_fonc->premier != NULL) {
+			printf("Veuillez renseigner le temps du skieur %s : ", liste_fonc->premier->skieurX.nom);
+			scanf_s("%d", &liste_fonc->premier->skieurX.temps);
+			insertion(skieur_temp, liste_fonc->premier->skieurX);
+			liste_fonc->premier = liste_fonc->premier->suivant;
 		}
 	}
 	if (tour == 3) {
-		while (liste->premier != NULL) {
-			printf("Veuillez renseigner le temps du skieur %s : ", liste->premier->skieurX.nom);
-			scanf_s("%d", &liste->premier->skieurX.temps1);
-			insertion(skieur_temp, liste->premier->skieurX);
-			liste->premier = liste->premier->suivant;
+		while (liste_fonc->premier != NULL) {
+			printf("Veuillez renseigner le temps du skieur %s : ", liste_fonc->premier->skieurX.nom);
+			scanf_s("%d", &liste_fonc->premier->skieurX.temps1);
+			insertion(skieur_temp, liste_fonc->premier->skieurX);
+			liste_fonc->premier = liste_fonc->premier->suivant;
 		}
 	}
 
@@ -327,11 +354,32 @@ void afficher_classement(listskieur* liste, listskieur* listeabandon, listskieur
 			}
 			else {
 				insertion(listeabandon, skieur_temp->skieurX);
-				printf("Abandon de :           | %s |, | %d |, | NA | \n", listeabandon->premier->skieurX.nom, listeabandon->premier->skieurX.temps);
+				printf("Abandon de :           | %s |, | %d |, |1 NA | \n", listeabandon->premier->skieurX.nom, listeabandon->premier->skieurX.temps);
 
 				skieur_temp = skieur_temp->suivant;
 			}
 		}
+
+
+
+	}
+	if (tour == 4) {
+		while (skieur_temp != NULL) {
+			if (skieur_temp->skieurX.temps1 != 0) {
+				insertion(classementliste, skieur_temp->skieurX);
+				printf("je suis la ");
+				printf("Qualification de :     | %s |, | %d |, | %d |, | %d |\n", classementliste->premier->skieurX.nom, listeabandon->premier->skieurX.temps, listeabandon->premier->skieurX.temps1);
+
+				skieur_temp = skieur_temp->suivant;
+			}
+			else {
+				insertion(listeabandon, skieur_temp->skieurX);
+				printf("Abandon de :           | %s |, | %d |, | %d |, | NA | \n", listeabandon->premier->skieurX.nom, listeabandon->premier->skieurX.temps);
+
+				skieur_temp = skieur_temp->suivant;
+			}
+		}
+
 
 
 	}
@@ -393,22 +441,27 @@ int main() {
 
 	// Déclaration des variables
 
-	int choix, nbskieur, nbskieurTemp, tour;//variable 
-	//pointeur pour gerer le menu
+	int choix;
 	int var = 0;
-	tour = 1;
-	int* environnementData = malloc(sizeof(*environnementData)); //variable pour l'environnement
+	int tour = 1;
 
 	bool etat = true; //variable pour la boucle while
 
 	listskieur* liste = initialisation();
 	listskieur* listeFirst = initialisation();
 	listskieur* listeSecond = initialisation();
+	listskieur* listeSeconde = initialisation();
 	listskieur* listeAbandon = initialisation();
-	libererListe(liste);
-	libererListe(listeFirst);
-	libererListe(listeSecond);
-	libererListe(listeAbandon);
+	liste->premier = NULL;
+	listeFirst->premier = NULL;
+	listeSecond->premier = NULL;
+	listeAbandon->premier = NULL;
+	listeSeconde->premier = NULL;
+	
+	//libererListe(liste);
+	//libererListe(listeFirst);
+	//libererListe(listeSecond);
+	//libererListe(listeAbandon);
 
 	while (etat) {
 		//menu de sélection des actions
@@ -423,28 +476,31 @@ int main() {
 		case 1:
 
 			//enregistrement des skieursZ dans la liste
-			libererListe(liste);
+			//libererListe(liste);
 			enregistrement_skieur(liste, choix);
+			var = 6;
 			
 			break;
+			
 		case 2:
-
 			//affichage de la liste des skieurs
-			if (tour == 1) {
-
+			if (tour == 1){
+				printf("Liste du premier tour \n");
 				visualisation_joueur(liste, choix, tour);
-				
-			}
-
-			printf("--------tour  =======  %d \n", tour);
-			if (tour == 2) {
-
-				visualisation_joueur(liste, choix, tour);
-				
+				//visualisation_joueur(liste, choix, tour);
+				var = 7;
 			}
 			if (tour == 3) {
-
+				printf("Liste du second tour \n");
 				visualisation_joueur(listeSecond, choix, tour);
+				var = 9;
+			}
+			
+			if (tour == 4) {
+				printf("Liste fin des deux tours \n");
+				visualisation_joueur(liste, choix, tour);
+				var = 3;
+
 			}
 
 
@@ -454,31 +510,36 @@ int main() {
 			//lancement de la course
 			
 			if (tour == 1) {
-				printf(RED "--------------Voici la liiiiste des skieurs :----------------------- \n" RESET);
+				printf(RED "--------------Voici la liste des skieurs qui participe au premier tour :----------------------- \n" RESET);
 				game_annime(liste, choix, tour);
 				var = 1;
 				printf("Veuillez renseigner le temps de chaque skieur : \n");
-				if (tour == 1) {
-					tour = 2;
-					enregistrement_temps(liste, listeFirst, tour);
-					libererListe(liste);
-				}
+				enregistrement_temps(liste, listeFirst, tour);
+				libererListe(liste);
+				tour = 2;
 				
-
 			}
 
 			if (tour == 3) {
-				printf(RED "--------------Voici la liiiisteSecond des skieurs :----------------------- \n" RESET);
-				tour = 2;
+				printf(RED "--------------Voici la liste des skieurs qui participe au deuxieme tour  :----------------------- \n" RESET);
 				game_annime(listeSecond, choix, tour);
-				var = 3;
 				printf("Veuillez renseigner le temps de chaque skieur : \n");
-				if (tour == 3) {
-					tour = 2;
-					enregistrement_temps(listeSecond, liste, tour);
-					libererListe(listeSecond);
-					tour = 3;
-				}
+				enregistrement_temps(listeSecond, listeSeconde, tour);
+				//libererListe(listeSeconde);
+				var = 3;
+				tour = 4;
+				//visualiser toute les liste 
+				printf("Liste \n");
+				visualisation_joueur(liste, choix, tour);
+				printf("Liste First \n");
+				visualisation_joueur(listeFirst, choix, tour);
+				printf("Liste Second \n");
+				visualisation_joueur(listeSecond, choix, tour);
+				printf("Liste Seconde \n");
+				visualisation_joueur(listeSeconde, choix, tour);
+				printf("Liste Abandon \n");
+				visualisation_joueur(listeAbandon, choix, tour);
+
 
 			}
 			break;
@@ -487,39 +548,62 @@ int main() {
 			//afficher le classement du premier tour en triant la liste en fonction du temps dans l'order croissant
 			printf("-----------------------------------------\n");
 			//Classement des joueurs qui ont fini la 
-			printf(RED "--------------Voici la liiiisteClassement  des skieurs :----------------------- \n" RESET);
+			printf(RED "--------------Voici la liste des skieurs qui sont qualifier et qui ont abandone :----------------------- \n" RESET);
 			if (tour == 2) {
 				afficher_classement(listeFirst, listeAbandon, listeSecond, choix, tour);
 				//libererListe(listeFirst);
 				//trierListeParTemps(listeSecond);
+				printf("\n");
 				printf("Premiere manche termine \n");
-				Sleep(1000);
+				printf("\n");
 				var = 5;
-
-
 			}
-			if (tour == 3) {
-				afficher_classement(liste, listeAbandon, listeSecond, choix, tour);
-				libererListe(liste);
-				printf("Premiere manche termine \n");
-				Sleep(1000);
+
+			if (tour == 4) {
+				//visualiser toute les liste 
+				printf("Liste \n");
+				visualisation_joueur(liste, choix, tour);
+				printf("Liste First \n");
+				visualisation_joueur(listeFirst, choix, tour);
+				printf("Liste Second \n");
+				visualisation_joueur(listeSecond, choix, tour);
+				printf("Liste Seconde \n");
+				visualisation_joueur(listeSeconde, choix, tour);
+				printf("Liste Abandon \n");
+				visualisation_joueur(listeAbandon, choix, tour);
+
+				printf("Valeuuuuur de tour %d \n", tour);
+				afficher_classement(listeSeconde, listeAbandon, liste, choix, tour);
+				//libererListe(liste);
+				printf("Deuxieme manche fini\n");
+				//visualiser toute les liste 
+				printf("Liste \n");
+				visualisation_joueur(liste, choix, tour);
+				printf("Liste First \n");
+				visualisation_joueur(listeFirst, choix, tour);
+				printf("Liste Second \n");
+				visualisation_joueur(listeSecond, choix, tour);
+				printf("Liste Seconde \n");
+				visualisation_joueur(listeSeconde, choix, tour);
+				printf("Liste Abandon \n");
+				visualisation_joueur(listeAbandon, choix, tour);
 			}
-			printf("-----------------------------------------\n");
-			//trierListeParTemps(listeSecond);
-			tour = 3;
 			break;
 
 		case 7:
 			//deuxieme manche 
-			printf("Deuxieme manche \n");
+			printf(MAG "-----------Lancement de la deuxieme manche----------------\n" RESET);
 			printf("-----------------------------------------\n");
 			Sleep(1000);
-			choix = 2;
+			choix = 3;
 			var = 2;
+			tour = 3;
 			break;
 		case 10:
 			etat = false;
 			break;
+		default :
+			printf("La saisie n'est pas valide veuillez renseigner un chiffre ");
 
 
 		}
